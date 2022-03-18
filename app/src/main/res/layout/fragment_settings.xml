@@ -91,7 +91,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/seekBar"
         app:layout_constraintVertical_bias="0.0"
-        app:tint="#FF919191" />
+        app:tint="#FF919191"
+        android:contentDescription="@string/volume" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -106,7 +107,8 @@
         app:layout_constraintStart_toEndOf="@+id/seekBar"
         app:layout_constraintTop_toTopOf="@+id/seekBar"
         app:layout_constraintVertical_bias="0.356"
-        app:tint="#FF919191" />
+        app:tint="#FF919191"
+        android:contentDescription="@string/volumeon" />
 
     <TextView
         android:id="@+id/textView3"
@@ -114,7 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:fontFamily="@font/baskervville"
-        android:text="Settings"
+        android:text="@string/settings"
         android:textSize="70sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -132,7 +134,8 @@
         android:scaleType="fitCenter"
         android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/back_to_home" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,4 +6,8 @@
     <string name="Settings_displayDelay">Display Delay</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="volume">volume</string>
+    <string name="volumeon">volumeOn</string>
+    <string name="settings">Settings</string>
+    <string name="back_to_home">back to home</string>
 </resources>
