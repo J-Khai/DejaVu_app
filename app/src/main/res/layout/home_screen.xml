@@ -99,7 +99,8 @@
         android:layout_marginEnd="16dp"
         android:src="@drawable/_c340b11_647f_4d55_b020_0a02b5cd2f25"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
