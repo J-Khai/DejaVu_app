@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DejavuApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Settings_music">Music</string>
+    <string name="Settings_inputTime">Input Time</string>
+    <string name="Settings_displayDelay">Display Delay</string>
 </resources>
