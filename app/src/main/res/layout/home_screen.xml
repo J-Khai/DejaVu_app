@@ -70,7 +70,7 @@
         android:src="@android:drawable/ic_menu_info_details"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
+        android:alpha="0.60"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -88,6 +88,7 @@
         app:layout_constraintEnd_toEndOf="@+id/startgameBtn"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
+        android:alpha="0.70"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -98,6 +99,7 @@
         android:src="@drawable/_c340b11_647f_4d55_b020_0a02b5cd2f25"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:alpha="0.60"
         tools:ignore="SpeakableTextPresentCheck" />
 
 
