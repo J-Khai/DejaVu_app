@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#919191"
+    android:background="@drawable/set"
     android:foregroundTint="#00FFFFFF"
     tools:context=".Settings">
 
@@ -84,6 +84,8 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:alpha="100"
+        android:contentDescription="@string/volume"
         android:src="@android:drawable/ic_lock_silent_mode"
         app:layout_constraintBottom_toBottomOf="@+id/seekBar"
         app:layout_constraintEnd_toStartOf="@+id/seekBar"
@@ -91,15 +93,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/seekBar"
         app:layout_constraintVertical_bias="0.0"
-        app:tint="#FF919191"
-        android:contentDescription="@string/volume" />
+        app:tint="#FF919191" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#AC5555"
-        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/volumeon"
         android:src="@android:drawable/ic_lock_silent_mode_off"
         app:layout_constraintBottom_toBottomOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,8 +107,7 @@
         app:layout_constraintStart_toEndOf="@+id/seekBar"
         app:layout_constraintTop_toTopOf="@+id/seekBar"
         app:layout_constraintVertical_bias="0.356"
-        app:tint="#FF919191"
-        android:contentDescription="@string/volumeon" />
+        app:tint="#FF919191" />
 
     <TextView
         android:id="@+id/textView3"
@@ -129,13 +128,13 @@
         android:layout_height="63dp"
         android:layout_weight="1"
         android:adjustViewBounds="true"
-
+        android:alpha="0.70"
+        android:contentDescription="@string/back_to_home"
         android:padding="0dp"
         android:scaleType="fitCenter"
         android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/back_to_home" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/helpBtn"
