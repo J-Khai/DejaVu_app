@@ -10,4 +10,6 @@
     <string name="volumeon">volumeOn</string>
     <string name="settings">Settings</string>
     <string name="back_to_home">back to home</string>
+    <string name="d_j_vu">Déjà Vu</string>
+    <string name="usernameHint">Username</string>
 </resources>
