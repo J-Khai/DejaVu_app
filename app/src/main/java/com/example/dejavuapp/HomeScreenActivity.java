@@ -1,6 +1,9 @@
 package com.example.dejavuapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.View;
@@ -20,10 +23,18 @@ public class HomeScreenActivity extends AppCompatActivity {
         settingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                setFragment(new Settings());
             }
         });
 
+
+    }
+
+    private void setFragment(Settings settings) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.settingsBtn,settings);
+        fragmentTransaction.commit();
 
     }
 }
