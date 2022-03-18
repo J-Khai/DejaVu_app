@@ -31,10 +31,11 @@ public class HomeScreenActivity extends AppCompatActivity {
     }
 
     private void setFragment(Settings settings) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayout,settings);
-        fragmentTransaction.commit();
+        setContentView(R.layout.fragment_settings);
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.replace(R.id.settingsBtn,settings);
+//        fragmentTransaction.commit();
 
     }
 }
