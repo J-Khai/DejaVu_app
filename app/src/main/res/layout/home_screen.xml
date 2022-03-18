@@ -42,7 +42,7 @@
         tools:layout_editor_absoluteY="1dp" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/startgameBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
@@ -63,7 +63,7 @@
         android:alpha="0.60"  />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/helpBtn"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:adjustViewBounds="true"
@@ -76,7 +76,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/leaderboardBtn"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginBottom="4dp"
@@ -87,13 +87,13 @@
         android:scaleType="fitCenter"
         android:src="@drawable/_04d32b4_c191_4365_a5a2_b7e2dd727905"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPhone"
+        app:layout_constraintEnd_toEndOf="@+id/startgameBtn"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/settingsBtn"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginEnd="16dp"
