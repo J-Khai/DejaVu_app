@@ -7,20 +7,33 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="bou!"
+        android:id="@+id/textView"
+        android:layout_width="270dp"
+        android:layout_height="112dp"
+        android:fontFamily="@font/baskervville"
+        android:text="Déjà Vu"
+        android:textColor="#000000"
+        android:textSize="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textInputEditText"
+        app:layout_constraintVertical_bias="0.287" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="208dp" />
-
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawableStart="@drawable/ic_launcher_foreground"
+        android:fontFamily="arial"
+        android:hint="Username"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="188dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
