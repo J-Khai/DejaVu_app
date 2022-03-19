@@ -30,47 +30,30 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
     }
     @Override
     public void onClick(View view) {
-//        switch (view.getId()){
-//            case R.id.settingsBtn:
-//                    FromHomeToSettings();
-//                    break;
-//            case R.id.helpBtn:
-//                FromHomeToHelp();
-//                break;
-//            case R.id.leaderboardBtn:
-//                break;
-//
-//        }
-
         if (view.getId() == R.id.settingsBtn){
             FromHomeToSettings();
         }
         if (view.getId() == R.id.helpBtn){
             FromHomeToHelp();
         }
+        if (view.getId() == R.id.leaderboardBtn){
+            FromHomeToLeaderBoard();
+        }
+    }
 
-
-
+    private void FromHomeToLeaderBoard() {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.HomeScreen,new LeaderBoard()).commit();
     }
 
     public void FromHomeToHelp() {
-//        ConstraintLayout activity = (ConstraintLayout) findViewById(R.id.HomeScreen);
-
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.HomeScreen,new HelpScreen()).commit();
-//        activity.setVisibility(View.GONE);
-
     }
 
     public void FromHomeToSettings() {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.HomeScreen,new Settings()).commit();
-
-
-
-
-
-
     }
 
 
