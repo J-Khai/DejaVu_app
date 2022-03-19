@@ -1,5 +1,7 @@
 package com.example.dejavuapp;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,31 +16,28 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 public class HelpScreen extends Fragment {
-
+    Activity context;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+        context = getActivity();
         return inflater.inflate(R.layout.fragment_help_screen, container, false);
     }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        final NavController navController = Navigation.findNavController(view);
-
-
-        ImageButton helpbtn = view.findViewById(R.id.helpBtn);
-
-        helpbtn.setOnClickListener(new View.OnClickListener() {
+    public void onStart(){
+        super.onStart();
+        ImageButton help_backhome = (ImageButton) context.findViewById(R.id.help_backhome);
+        help_backhome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_helpScreen2_to_settings2);
-
-
+                Intent intent = new Intent(context, HomeScreenActivity.class);
+                startActivity(intent);
             }
         });
-
     }
+
+
+
+
 }

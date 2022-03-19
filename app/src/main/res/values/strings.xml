@@ -12,4 +12,8 @@
     <string name="back_to_home">back to home</string>
     <string name="d_j_vu">Déjà Vu</string>
     <string name="usernameHint">Username</string>
+    <string name="How_to_Play">After you enter your username, and press the “Start Game” button, the game begins, as the computer immediately starts to display integers all over the screen, and they would disappear after a short period of time (adjustable in the settings window), and then the user will be prompted to enter each number that was displayed in the correct order. If the user guesses every number correctly, the next round begins, and the process continues, if the user’s guess was incorrect, they are sent back to the main menu, where they can look at their high score in the leaderboards, or they can play again.</string>
+    <string name="help_objective">Objective</string>
+    <string name="help_obj_description">The objective of the game is to test the user’s ability to recall as many numbers in the correct order as possible.</string>
+    <string name="help_htpTitle">How to Play</string>
 </resources>
