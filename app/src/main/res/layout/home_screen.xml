@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_homne"
-    tools:context=".HomeScreenActivity">
+    tools:context=".HomeScreenActivity"
+    android:id="@+id/HomeScreen">
 
     <TextView
         android:id="@+id/textView"

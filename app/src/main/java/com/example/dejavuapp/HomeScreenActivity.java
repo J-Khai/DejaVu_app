@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class HomeScreenActivity extends AppCompatActivity {
-    ImageButton settingsBtn, leaderBoardBtn, helpBtn, homeBtn;
+    ImageButton settingsBtn, leaderBoardBtn, helpBtn, backhomeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,19 +19,22 @@ public class HomeScreenActivity extends AppCompatActivity {
         setContentView(R.layout.home_screen);
 
         settingsBtn = findViewById(R.id.settingsBtn); //gets the id
-
         SwitchFragment();
 
 
     }
 
-    private void SwitchFragment() {
+    public void SwitchFragment() {
         settingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.fragment_settings);
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.HomeScreen,new Settings()).commit();
             }
         });
+
+
+
     }
 
 
