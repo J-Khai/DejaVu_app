@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/HelpScreenFragment"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HelpScreen">
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:fontFamily="@font/baskervville"
-        android:text="@string/help_objective"
+        android:text="Objective"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
         android:layout_width="345dp"
         android:layout_height="84dp"
         android:layout_marginTop="4dp"
-        android:text="@string/help_obj_description"
+        android:text="The objective of the game is to test the user’s ability to recall as many numbers in the correct order as possible. "
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baskervville"
-        android:text="@string/help_htpTitle"
+        android:text="How to Play"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/textView12"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,28 +52,24 @@
         android:layout_width="376dp"
         android:layout_height="240dp"
         android:layout_marginBottom="232dp"
-        android:text="@string/How_to_Play"
+        android:text="After you enter your username, and press the “Start Game” button, the game begins, as the computer immediately starts to display integers all over the screen, and they would disappear after a short period of time (adjustable in the settings window), and then the user will be prompted to enter each number that was displayed in the correct order. If the user guesses every number correctly, the next round begins, and the process continues, if the user’s guess was incorrect, they are sent back to the main menu, where they can look at their high score in the leaderboards, or they can play again. "
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/help_backhome"
-        android:layout_width="48dp"
+        android:id="@+id/imageButton"
+        android:layout_width="44dp"
         android:layout_height="54dp"
-        android:layout_marginTop="178dp"
-        android:layout_marginEnd="367dp"
-
         android:layout_weight="1"
         android:adjustViewBounds="true"
+
         android:contentDescription="@string/back_to_home"
         android:padding="0dp"
         android:scaleType="fitCenter"
         android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
