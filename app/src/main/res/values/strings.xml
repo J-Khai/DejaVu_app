@@ -16,4 +16,5 @@
     <string name="help_objective">Objective</string>
     <string name="help_obj_description">The objective of the game is to test the user’s ability to recall as many numbers in the correct order as possible.</string>
     <string name="help_htpTitle">How to Play</string>
+    <string name="objDes">The objective of the game is to test the user’s ability to recall as many numbers in the correct order as possible.</string>
 </resources>
