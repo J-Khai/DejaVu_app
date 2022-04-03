@@ -37,29 +37,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="-86dp"
-        tools:layout_editor_absoluteY="1dp" />
-
-    <EditText
-        android:id="@+id/startgameBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-
-        android:ems="90"
-        android:fontFamily="sans-serif"
-        android:inputType="phone"
-        android:minHeight="48dp"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.379"
-        tools:text="Start Game"
-        android:alpha="0.60"  />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-230dp" />
 
     <ImageButton
         android:id="@+id/helpBtn"
@@ -82,14 +61,12 @@
         android:layout_weight="1"
         android:adjustViewBounds="true"
 
+        android:alpha="0.70"
         android:padding="0dp"
         android:scaleType="fitCenter"
         android:src="@drawable/_04d32b4_c191_4365_a5a2_b7e2dd727905"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/startgameBtn"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        android:alpha="0.70"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -101,6 +78,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/startgameBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/start_game"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.019" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

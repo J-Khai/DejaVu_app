@@ -136,18 +136,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageButton
-        android:id="@+id/helpBtn"
-        android:layout_width="64dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="352dp"
-        android:adjustViewBounds="true"
-        android:alpha="0.60"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:src="@android:drawable/ic_menu_info_details"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

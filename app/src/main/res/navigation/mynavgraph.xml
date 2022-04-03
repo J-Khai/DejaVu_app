@@ -18,7 +18,14 @@
         android:id="@+id/helpScreen"
         android:name="com.example.dejavuapp.HelpScreen"
         android:label="fragment_help_screen"
-        tools:layout="@layout/fragment_help_screen" />
+        tools:layout="@layout/fragment_help_screen" >
+        <action
+            android:id="@+id/action_helpScreen_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_helpScreen_to_leaderBoard"
+            app:destination="@id/leaderBoard" />
+    </fragment>
     <fragment
         android:id="@+id/leaderBoard"
         android:name="com.example.dejavuapp.LeaderBoard"
@@ -27,5 +34,8 @@
         <action
             android:id="@+id/action_leaderBoard_to_settings"
             app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_leaderBoard_to_helpScreen"
+            app:destination="@id/helpScreen" />
     </fragment>
 </navigation>
