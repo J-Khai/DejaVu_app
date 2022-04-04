@@ -22,7 +22,7 @@ public class Player {
         return this.displayNumber;
     }
     public int getPlayerScore (){
-        return playerScore;
+        return this.playerScore;
     }
 
 

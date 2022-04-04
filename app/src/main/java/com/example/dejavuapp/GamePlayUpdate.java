@@ -13,9 +13,10 @@ import android.widget.TextView;
 
 public class GamePlayUpdate {
     Player player = new Player();
+    int tempScore = 0;
 
-    public void updateScore(boolean update){
-        int tempScore = 0;
+    public int updateScore(boolean update){
+
         if (update) {
             tempScore+= 10;
         }
@@ -23,6 +24,7 @@ public class GamePlayUpdate {
             tempScore-= 10;
         }
         player.setPlayerScore(tempScore);
+        return player.getPlayerScore();
     }
 
 

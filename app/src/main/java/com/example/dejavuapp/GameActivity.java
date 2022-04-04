@@ -22,7 +22,7 @@ public class GameActivity extends AppCompatActivity {
     int round = 1;
     int MaxRound = 100;
     String currentPlayer;
-    int currentScore = 0;
+    private int currentScore = 0;
     boolean running = true;
 
     private final GamePlayUpdate gamePlay = new GamePlayUpdate();
@@ -37,9 +37,6 @@ public class GameActivity extends AppCompatActivity {
         randomNumberDisplay =  findViewById(R.id.randomNumberDisplay);
         currentScoreDisplay =  findViewById(R.id.currentScoreDisplay);
         currentRoundDisplay =  findViewById(R.id.currentRoundDisplay);
-
-
-
         Game();
 
 
@@ -57,13 +54,16 @@ public class GameActivity extends AppCompatActivity {
     public void Game(){
 
             int generatedNumber = (int) (Math.random() * (max - min + 1) + min);
+            player.setDisplayNumber(generatedNumber);
+            player.setPlayerScore(currentScore);
             int displayNum = player.getDisplayNumber();
             int displayScore = player.getPlayerScore();
 
 
-            player.setDisplayNumber(generatedNumber);
+
             System.out.println(displayNum);
             System.out.println(displayScore);
+
 
 
 
@@ -77,8 +77,9 @@ public class GameActivity extends AppCompatActivity {
                     String inputNum = inputNumber.getText().toString();
                     int num = Integer.parseInt(inputNum);
                     boolean ans = player.checkAnswer(num);
-                    gamePlay.updateScore(ans);
-                    player.setPlayerScore(currentScore);
+                    currentScore = gamePlay.updateScore(ans);
+                    currentScoreDisplay.setText(String.valueOf(currentScore));
+                    System.out.println("current score when clicked " + currentScore);
                     if(ans){
                         round++;
                         Game();
