@@ -2,8 +2,8 @@ package com.example.dejavuapp;
 
 public class Player {
     String playerName;
-    int playerScore;
-    int displayNumber;
+    int playerScore = 0;
+    int displayNumber = 0;
     int check;
 
     public Player(String playerName, int score){
@@ -35,14 +35,9 @@ public class Player {
 
     }
 
-    public void checkAnswer(int check){
+    public boolean checkAnswer(int check){
         this.check = check;
-        int tempScore = 0;
-
-        if(this.check == getDisplayNumber()){
-            tempScore+= 10; setPlayerScore(tempScore);
-        }
-        else tempScore-=10; setPlayerScore(tempScore);
+        return this.check == getDisplayNumber();
 
 
     }

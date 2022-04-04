@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
+    android:id="@+id/Gamescreen"
     tools:context=".GameActivity">
 
     <TextView
-        android:id="@+id/ScoreDisplay"
+        android:id="@+id/randomNumberDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
@@ -26,16 +27,16 @@
         app:layout_constraintVertical_bias="0.44" />
 
     <TextView
-        android:id="@+id/textRoundNum"
+        android:id="@+id/currentRoundDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
         android:text=""
         android:textColor="#FF35504D"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/ScoreDisplay"
+        app:layout_constraintBottom_toTopOf="@+id/randomNumberDisplay"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textScoreNum"
+        app:layout_constraintTop_toBottomOf="@+id/currentScoreDisplay"
         app:layout_constraintVertical_bias="0.137" />
 
     <TextView
@@ -47,8 +48,8 @@
         android:text="Round"
         android:textColor="#FF35504D"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/ScoreDisplay"
-        app:layout_constraintEnd_toStartOf="@+id/textRoundNum"
+        app:layout_constraintBottom_toTopOf="@+id/randomNumberDisplay"
+        app:layout_constraintEnd_toStartOf="@+id/currentRoundDisplay"
         app:layout_constraintHorizontal_bias="0.014"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textScore"
@@ -67,7 +68,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textScoreNum"
+        android:id="@+id/currentScoreDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -90,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ScoreDisplay" />
+        app:layout_constraintTop_toBottomOf="@+id/randomNumberDisplay" />
 
     <EditText
         android:id="@+id/textInput"

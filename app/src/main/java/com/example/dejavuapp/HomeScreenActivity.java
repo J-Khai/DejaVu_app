@@ -22,7 +22,7 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
     ImageButton settingsBtn, leaderBoardBtn, helpBtn;
     Button startGame;
     EditText username;
-    int playerScore = 6;
+    int playerScore = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

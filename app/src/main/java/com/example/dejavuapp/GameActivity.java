@@ -7,35 +7,89 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 
 public class GameActivity extends AppCompatActivity {
     Button button;
     EditText inputNumber;
+    TextView randomNumberDisplay, currentScoreDisplay, currentRoundDisplay;
     int max = 1000;
     int min = 1;
-    int numberGen;
+    int round = 1;
     int MaxRound = 100;
     String currentPlayer;
-    int currentScore;
-    View view;
-    private GamePlay gamePlay;
+    int currentScore = 0;
+    boolean running = true;
+
+    private final GamePlayUpdate gamePlay = new GamePlayUpdate();
+    private final Player player = new Player();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        button = (Button) findViewById(R.id.gamebutton);
-        inputNumber = (EditText) findViewById(R.id.textInput);
+        button =  findViewById(R.id.gamebutton);
+        inputNumber =  findViewById(R.id.textInput);
+        randomNumberDisplay =  findViewById(R.id.randomNumberDisplay);
+        currentScoreDisplay =  findViewById(R.id.currentScoreDisplay);
+        currentRoundDisplay =  findViewById(R.id.currentRoundDisplay);
 
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                gamePlay.isRunning();
 
-            }
-        };
-        runnable.run();
+
+        Game();
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+    public void Game(){
+
+            int generatedNumber = (int) (Math.random() * (max - min + 1) + min);
+            int displayNum = player.getDisplayNumber();
+            int displayScore = player.getPlayerScore();
+
+
+            player.setDisplayNumber(generatedNumber);
+            System.out.println(displayNum);
+            System.out.println(displayScore);
+
+
+
+            randomNumberDisplay.setText(String.valueOf(displayNum));
+            currentRoundDisplay.setText(String.valueOf(round));
+            currentScoreDisplay.setText(String.valueOf(displayScore));
+
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String inputNum = inputNumber.getText().toString();
+                    int num = Integer.parseInt(inputNum);
+                    boolean ans = player.checkAnswer(num);
+                    gamePlay.updateScore(ans);
+                    player.setPlayerScore(currentScore);
+                    if(ans){
+                        round++;
+                        Game();
+                    }
+                    if (player.getPlayerScore() == 30){
+                        Toast toast = Toast.makeText(getApplicationContext(), "GameOver", Toast.LENGTH_LONG);
+                        toast.show();
+
+                    }
+                }
+            });
 
 
 
@@ -47,37 +101,7 @@ public class GameActivity extends AppCompatActivity {
 
 
 
-    public void gameActivity() {
 
-        // within progress bar
-//        String inputNum = inputNumber.getText().toString();
-//        int num = Integer.parseInt(inputNum);
-//        new Player().setcheck(num);
-//        int score = new Player(currentPlayer, currentScore).getPlayerScore();
-//
-//        TextView totalScore = (TextView) findViewById(R.id.textScore);
-//        totalScore.setText(score);
-//        setGameInfo();
-
-
-    }
-
-
-
-//    public void setGameInfo(){
-//        numberGen = (int) (Math.random() * (max - min + 1) + min); //gen random number
-//        System.out.println("num" + numberGen);
-//        currentPlayer = new Player().getPlayerName(); //get player name
-//        currentScore = new Player().getPlayerScore();// get player score
-//        new Player().setDisplayNumber(numberGen);// display the random num
-//
-//        int displayNumGenerated = new Player().getDisplayNumber(); // get the random num
-//        TextView scoreDisplay = (TextView) findViewById(R.id.ScoreDisplay);
-//        scoreDisplay.setText(String.valueOf(displayNumGenerated)); // send the random num to the app
-//
-//
-//
-//    }
 
 
 }
