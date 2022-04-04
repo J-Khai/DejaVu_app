@@ -6,13 +6,23 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.Objects;
+
 public class HomeScreenActivity extends AppCompatActivity implements View.OnClickListener {
-    ImageButton settingsBtn, leaderBoardBtn, helpBtn, backhomeBtn;
+    ImageButton settingsBtn, leaderBoardBtn, helpBtn;
+    Button startGame;
+    EditText username;
+    int playerScore = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +32,14 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
         settingsBtn = findViewById(R.id.settingsBtn); //gets the id
         helpBtn = findViewById(R.id.helpBtn);
         leaderBoardBtn = findViewById(R.id.leaderboardBtn);
+        startGame = findViewById(R.id.startgameBtn);
+        username = (TextInputEditText) findViewById(R.id.userName);
 
         settingsBtn.setOnClickListener(this);
         helpBtn.setOnClickListener(this);
         leaderBoardBtn.setOnClickListener(this);
+        startGame.setOnClickListener(this);
+
 
     }
     @Override
@@ -39,6 +53,17 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
         if (view.getId() == R.id.leaderboardBtn){
             FromHomeToLeaderBoard();
         }
+        if (view.getId() == R.id.startgameBtn){
+            FromHomeToGame();
+
+        }
+    }
+
+    private void FromHomeToGame() {
+        String userName = (username.getText().toString());
+        new Player(userName, playerScore);
+        Intent intent = new Intent(this, GameActivity.class);
+        startActivity(intent);
     }
 
     private void FromHomeToLeaderBoard() {

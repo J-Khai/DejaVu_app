@@ -7,13 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 
-public class GameActivity extends AppCompatActivity implements View.OnClickListener{
+public class GameActivity extends AppCompatActivity {
     Button button;
     EditText inputNumber;
-    static boolean CORRECT;
+    int max = 1000;
+    int min = 1;
+    int numberGen;
+    int MaxRound = 100;
+    String currentPlayer;
+    int currentScore;
+    View view;
+    private GamePlay gamePlay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,30 +28,56 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         button = (Button) findViewById(R.id.gamebutton);
         inputNumber = (EditText) findViewById(R.id.textInput);
 
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                gamePlay.isRunning();
 
-        button.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.gamebutton){
-            gameRunning();
-        }
-
-    }
-
-    public void gameRunning(){
-        int inputNum_value = new Score().getDisplayNumber();
-        TextView scoreDisplay = (TextView) findViewById(R.id.ScoreDisplay);
-        scoreDisplay.setText(inputNum_value);
-
-        String inputNum = inputNumber.getText().toString();
-        int num = Integer.parseInt(inputNum);
-        new Score().setcheck(num);
-        int score = new Score().getPlayerScore();
+            }
+        };
+        runnable.run();
 
 
 
 
     }
+
+
+
+
+
+
+    public void gameActivity() {
+
+        // within progress bar
+//        String inputNum = inputNumber.getText().toString();
+//        int num = Integer.parseInt(inputNum);
+//        new Player().setcheck(num);
+//        int score = new Player(currentPlayer, currentScore).getPlayerScore();
+//
+//        TextView totalScore = (TextView) findViewById(R.id.textScore);
+//        totalScore.setText(score);
+//        setGameInfo();
+
+
+    }
+
+
+
+//    public void setGameInfo(){
+//        numberGen = (int) (Math.random() * (max - min + 1) + min); //gen random number
+//        System.out.println("num" + numberGen);
+//        currentPlayer = new Player().getPlayerName(); //get player name
+//        currentScore = new Player().getPlayerScore();// get player score
+//        new Player().setDisplayNumber(numberGen);// display the random num
+//
+//        int displayNumGenerated = new Player().getDisplayNumber(); // get the random num
+//        TextView scoreDisplay = (TextView) findViewById(R.id.ScoreDisplay);
+//        scoreDisplay.setText(String.valueOf(displayNumGenerated)); // send the random num to the app
+//
+//
+//
+//    }
+
+
 }

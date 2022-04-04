@@ -13,21 +13,21 @@
         android:id="@+id/textView"
         android:layout_width="270dp"
         android:layout_height="112dp"
+        android:layout_marginTop="132dp"
         android:fontFamily="@font/baskervville"
         android:text="@string/d_j_vu"
         android:textColor="#000000"
         android:textSize="72sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textInputEditText"
-        app:layout_constraintVertical_bias="0.287" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/userName"
+        android:layout_width="336dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="48dp"
         android:drawableStart="@drawable/ic_launcher_foreground"
         android:fontFamily="arial"
         android:hint="@string/usernameHint"
@@ -37,20 +37,25 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-230dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageButton
         android:id="@+id/helpBtn"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:adjustViewBounds="true"
+        android:alpha="0.60"
         android:padding="0dp"
         android:scaleType="fitCenter"
         android:src="@android:drawable/ic_menu_info_details"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:alpha="0.60"
+        app:layout_constraintEnd_toStartOf="@+id/settingsBtn"
+        app:layout_constraintStart_toEndOf="@+id/leaderboardBtn"
+        app:layout_constraintTop_toBottomOf="@+id/startgameBtn"
+        app:layout_constraintVertical_bias="0.977"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -83,17 +88,16 @@
         android:id="@+id/startgameBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
         android:backgroundTint="@color/white"
         android:text="@string/start_game"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textInputEditText"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.019" />
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        app:layout_constraintVertical_bias="0.141" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
