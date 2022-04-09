@@ -10,12 +10,14 @@
 
     <TextView
         android:id="@+id/randomNumberDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="242dp"
+        android:layout_height="56dp"
         android:layout_marginTop="250dp"
         android:layout_marginBottom="30dp"
         android:fontFamily="@font/baskervville"
         android:text=""
+
+        android:textAlignment="center"
         android:textColor="#FF35504D"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -28,16 +30,17 @@
 
     <TextView
         android:id="@+id/currentRoundDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:text=""
+        android:layout_width="65dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="276dp"
+        android:text="999"
+        android:textAlignment="center"
         android:textColor="#FF35504D"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/randomNumberDisplay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currentScoreDisplay"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintVertical_bias="0.125" />
 
     <TextView
         android:id="@+id/textRound"
@@ -46,11 +49,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:text="Round"
+        android:textStyle="bold"
         android:textColor="#FF35504D"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/randomNumberDisplay"
         app:layout_constraintEnd_toStartOf="@+id/currentRoundDisplay"
-        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textScore"
         app:layout_constraintVertical_bias="0.019" />
@@ -59,35 +63,38 @@
         android:id="@+id/textScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Score"
         android:textColor="#FF35504D"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/currentScoreDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="62dp"
+        android:layout_height="28dp"
         android:layout_marginTop="16dp"
-        android:text=""
+        android:text="999"
+        android:textAlignment="center"
 
         android:textColor="#FF35504D"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toEndOf="@+id/textScore"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
         android:id="@+id/displayTime"
-        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginTop="30dp"
-        android:progressDrawable="@color/teal_200"
+        android:layout_marginTop="32dp"
+        android:background="#00A17777"
+        android:progressTint="@color/purple_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,15 +142,40 @@
 
     <Button
         android:id="@+id/gamebutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
-        android:text="Button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="288dp"
+        android:backgroundTint="#71D554"
+        android:checkable="true"
+        android:text="✓"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInput"
-        app:layout_constraintVertical_bias="0.222" />
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCountDown"
+        android:layout_width="89dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="47dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:background="#00FFFFFF"
+        android:foregroundTint="#C59F9F"
+        app:layout_constraintEnd_toStartOf="@+id/textViewCountDown"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

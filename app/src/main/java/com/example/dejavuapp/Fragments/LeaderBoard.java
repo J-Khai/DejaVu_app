@@ -1,4 +1,4 @@
-package com.example.dejavuapp;
+package com.example.dejavuapp.Fragments;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import com.example.dejavuapp.HomeScreenActivity;
+import com.example.dejavuapp.R;
+
 
 public class LeaderBoard extends Fragment {
 
@@ -18,6 +21,8 @@ public class LeaderBoard extends Fragment {
     public LeaderBoard() {
         // Required empty public constructor
     }
+
+
 
 
     Activity context;

@@ -1,17 +1,14 @@
-package com.example.dejavuapp;
+package com.example.dejavuapp.BackEnd;
 
 public class Player {
-    String playerName;
-    int playerScore = 0;
-    int displayNumber = 0;
+    private  String playerName;
+    int playerScore = 100;
+    int displayNumber;
     int check;
 
-    public Player(String playerName, int score){
-        this.playerName = playerName;
-        this.playerScore = score;
-    }
 
-    public Player() {
+    public void setPlayerName(String playerName){
+        this.playerName = playerName;
 
     }
 
@@ -27,7 +24,7 @@ public class Player {
 
 
     public void setPlayerScore (int playerScore){
-        this.playerScore = playerScore;
+        this.playerScore= playerScore;
     }
 
     public void setDisplayNumber(int displayNumber){

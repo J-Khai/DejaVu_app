@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/settings"
-        android:name="com.example.dejavuapp.Settings"
+        android:name="com.example.dejavuapp.Fragments.Settings"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/helpScreen"
-        android:name="com.example.dejavuapp.HelpScreen"
+        android:name="com.example.dejavuapp.Fragments.HelpScreen"
         android:label="fragment_help_screen"
         tools:layout="@layout/fragment_help_screen" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/leaderBoard"
-        android:name="com.example.dejavuapp.LeaderBoard"
+        android:name="com.example.dejavuapp.Fragments.LeaderBoard"
         android:label="fragment_leader_board"
         tools:layout="@layout/fragment_leader_board" >
         <action
