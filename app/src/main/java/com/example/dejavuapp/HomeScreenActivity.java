@@ -3,6 +3,7 @@ package com.example.dejavuapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -32,14 +33,16 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
 
         settingsBtn = findViewById(R.id.settingsBtn); //gets the id
         helpBtn = findViewById(R.id.helpBtn);
-        leaderBoardBtn = findViewById(R.id.leaderboardBtn);
+        //leaderBoardBtn = findViewById(R.id.leaderboardBtn);
         startGame = findViewById(R.id.startgameBtn);
         INputuserName =  findViewById(R.id.userName);
 
         settingsBtn.setOnClickListener(this);
         helpBtn.setOnClickListener(this);
-        leaderBoardBtn.setOnClickListener(this);
+        //leaderBoardBtn.setOnClickListener(this);
         startGame.setOnClickListener(this);
+
+
 
 
     }
@@ -52,9 +55,9 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
         if (view.getId() == R.id.helpBtn){
             FromHomeToHelp();
         }
-        if (view.getId() == R.id.leaderboardBtn){
-            FromHomeToLeaderBoard();
-        }
+//        if (view.getId() == R.id.leaderboardBtn){
+//            FromHomeToLeaderBoard();
+        //}
         if (view.getId() == R.id.startgameBtn){
             userName = Objects.requireNonNull(INputuserName.getText()).toString().trim();
 

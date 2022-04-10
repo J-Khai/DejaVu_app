@@ -117,16 +117,6 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/settingsBtn"
-        android:layout_width="67dp"
-        android:layout_height="71dp"
-        android:alpha="0.60"
-        android:src="@drawable/_c340b11_647f_4d55_b020_0a02b5cd2f25"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageButton
         android:id="@+id/backHomebutton"
         android:layout_width="57dp"
         android:layout_height="63dp"
